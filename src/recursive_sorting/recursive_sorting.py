@@ -4,18 +4,22 @@ def merge( arrA, arrB ):
     i_couldnt_figure_these_variables_out = [0] * elements
     merged_arr = []
     # TO-DO
+    # While left and right sides have elements, compare and append
     while len( arrA ) and len( arrB ):
       if arrA[0] <= arrB[0]:
         merged_arr.append( arrA.pop( 0 ) )
       else:
         merged_arr.append( arrB.pop( 0 ) )
 
+    # while the left side has elements, append 
     while len( arrA ):
       merged_arr.append( arrA.pop( 0 ) )
 
+    # while the right side has elements, append
     while len( arrB ):
        merged_arr.append( arrB.pop( 0 ) )
     
+    # return sorted and merged list
     return merged_arr
 
 
